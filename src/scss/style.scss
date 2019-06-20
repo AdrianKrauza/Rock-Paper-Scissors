@@ -1,0 +1,120 @@
+@import "setting";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $bg-color;
+    overflow-x: hidden;
+}
+
+p {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    transition: .2s;
+    padding: 50px;
+}
+#whoWin{
+    display: none;
+    opacity: 0;
+    
+}
+#score{
+    text-align: center;
+    width: 100vw;
+    background: white;
+    // height: 50px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 45px;
+    color:$bg-color;
+}
+#img,
+#fight {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    transition: .3s;
+
+    @media (min-width: 1000px) {
+        padding: 0 calc(45vw - 30vw);
+    }
+
+    img {
+        border: 5px solid white;
+        border-radius: 100%;
+        width: 15vw;
+        height: 15vw;
+        cursor: pointer;
+        transform: rotate(180deg);
+
+        @media (max-width: 1000px) {
+            width: 25vw;
+            height: 25vw;
+        }
+
+        margin: 10px;
+        transition: .2s;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.185);
+            transform: scale(1.1);
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@keyframes humanAni {
+    0% {
+        transform: translate3d(-55vw, 0, 0);
+
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes pcAni {
+    0% {
+        transform: translate3d(55vw, 0, 0);
+
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        transform: rotate(90deg);
+    }
+}
+
+#fight {
+    display: none;
+    opacity: 0;
+
+    #human {
+        transform: translate3d(-55vw, 0, 0);
+        animation-duration: 1.0s;
+        animation-name: humanAni;
+        animation-fill-mode: forwards;
+        transform: rotate(180deg);
+    }
+
+    #pc {
+        transform: translate3d(55vw, 0, 0);
+        animation-duration: 1.0s;
+        animation-name: pcAni;
+        animation-fill-mode: forwards;
+        transform: rotate(180deg);
+    }
+}
+
