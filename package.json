@@ -4,28 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node tools/build.mjs",
+    "dev": "node tools/build.mjs --serve"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.3",
-    "del": "^4.1.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-babel": "^7.0.1",
-    "gulp-changed": "^3.2.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-html-replace": "^1.6.2",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-minify": "^3.1.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.1.7"
+    "sass": "^1.106.1",
+    "postcss": "^8.5.31",
+    "autoprefixer": "^10.6.1",
+    "clean-css": "^5.3.3",
+    "terser": "^5.51.2",
+    "html-minifier-terser": "^7.2.0",
+    "sharp": "^0.35.5",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7"
+  },
+  "engines": {
+    "node": ">=22.18.0"
   }
 }

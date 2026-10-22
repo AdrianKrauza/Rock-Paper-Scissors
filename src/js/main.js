@@ -30,7 +30,7 @@ const win = (whoWin) => {
 }
 for (let i = 0; i < el.length; i++) {
     el[i].onclick = function (e) {
-        move = e.path[0].alt
+        move = e.currentTarget.alt
         document.getElementById('img').style.opacity = 0
         document.getElementById('move').style.opacity = 0
         setTimeout(() => {
